@@ -1,0 +1,27 @@
+# Local data and generated research artifacts
+/data/
+/features/
+/results/
+/reports/
+/demo/
+/configs/demo.yaml
+# Credentials, personal files and development caches
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pkl
+*.pickle
+*.mp3
+*.wav
+*.edf
+*.zip
+.DS_Store
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
