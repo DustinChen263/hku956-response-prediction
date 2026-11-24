@@ -1,0 +1,88 @@
+synthetic: false
+adapter: hku956
+paths:
+  raw_dir: data/raw/HKU956/HKU956
+  audio_dir: data/raw/audio
+  processed_dir: data/processed/song_level_v1
+  splits_dir: data/splits
+  features_dir: features/song_level_v1
+  results_dir: results/song_level_mlp_v1
+  reports_dir: reports/song_level_mlp_v1
+physiology:
+  target: mean_hr
+  window_s: 30
+  ibi_unit: seconds
+  ibi_timestamp_semantics: interval_end
+  min_ibi_ms: 300
+  max_ibi_ms: 2000
+  max_relative_change: 0.2
+  min_pairs: 20
+  min_coverage: 0.8
+  max_gap_s: 3.0
+  min_hr_bpm: 30
+  max_hr_bpm: 220
+  hr_sample_rate: 1.0
+  allow_untimed_ibi: false
+audio:
+  backend: acoustic
+  sample_rate: 22050
+  n_mfcc: 13
+  mert_model: m-a-p/MERT-v1-95M
+  mert_revision: null
+  mert_layer: -1
+  chunk_s: 5
+  representation_scope: whole_track
+split:
+  seed: 20261017
+  counts:
+  - 22
+  - 4
+  - 4
+  cv_folds: 5
+  song_disjoint: false
+training:
+  targets:
+  - mean_hr
+  - arousal
+  - valence
+  cohort: complete
+  models:
+  - single_mlp
+  - multi_mlp
+  - matched_multi_mlp
+  - av_mlp
+  seeds:
+  - 17
+  - 42
+  - 93
+  ridge_alphas:
+  - 0.1
+  - 1
+  - 10
+  - 100
+  hidden_sizes:
+  - 16
+  - 32
+  l2_values:
+  - 0.001
+  - 0.01
+  learning_rate: 0.003
+  epochs: 500
+  patience: 40
+  min_delta: 1.0e-05
+  pca_components: null
+  bootstrap_samples: 2000
+research_scope:
+  primary_targets:
+  - mean_hr
+  - arousal
+  - valence
+  hrv_required: false
+  input: full Jamendo track with corresponding ID; not reconstructed playback
+  mean_hr_endpoint: first30_wall_clock
+  av_endpoint: post_listening_rating
+  claim: track-level association/prediction for unseen participants; exact stimulus
+    exposure not established
+  final_holdout_evaluation: false
+  comparison: MLP families on the locked whole-track baseline cohort; no final holdout
+    evaluation

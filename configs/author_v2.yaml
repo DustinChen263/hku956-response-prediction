@@ -1,0 +1,16 @@
+# Audit/QC only. This does not enable audio training or change the existing split.
+version: author_v2_audit_2026-10-28
+log_timezone: Asia/Hong_Kong
+log_duration_tolerance_s: 1.0
+ibi_boundary_tolerance_s: 1.0
+media_consistency_tolerance_s: 1.5
+min_analysis_duration_s: 30
+physiology:
+  min_ibi_ms: 300
+  max_ibi_ms: 2000
+  max_relative_change: 0.2
+  min_pairs: 20
+  min_coverage: 0.8
+  max_gap_s: 3.0
+  timestamp_tolerance_s: 0.04
+# Engineering thresholds inherited from v1, not optimized to improve pass counts.
