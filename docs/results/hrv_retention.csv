@@ -1,0 +1,11 @@
+window,policy,scope,total_records,retained_records,retained_participants,retained_percent,with_audio_records,with_audio_participants,without_pause_records,audio_and_both_AV_records,participants_with_at_least5_records,name,coverage,gap,pairs,artifact,run
+full,E1_permissive,all,956,354,28,37.02928870292887,285,28,312,285,21,E1_permissive,0.5,10.0,20,0.2,0.0
+full,E2_intermediate,all,956,159,26,16.631799163179917,129,26,150,129,10,E2_intermediate,0.7,5.0,20,0.1,0.0
+full,E3_stringent,all,956,107,21,11.192468619246862,85,19,101,85,8,E3_stringent,0.8,3.0,20,0.05,0.0
+full,E4_high_coverage,all,956,79,19,8.263598326359833,66,17,77,66,6,E4_high_coverage,0.9,1.0,30,0.02,0.0
+full,E5_continuous20,all,956,106,21,11.087866108786612,85,19,100,85,8,E5_continuous20,0.8,3.0,20,0.05,20.0
+first30,E1_permissive,all,956,378,28,39.53974895397489,301,28,365,301,24,E1_permissive,0.5,10.0,20,0.2,0.0
+first30,E2_intermediate,all,956,215,26,22.489539748953973,172,26,210,172,16,E2_intermediate,0.7,5.0,20,0.1,0.0
+first30,E3_stringent,all,956,150,23,15.690376569037657,122,22,148,122,10,E3_stringent,0.8,3.0,20,0.05,0.0
+first30,E4_high_coverage,all,956,113,18,11.820083682008368,94,17,112,94,7,E4_high_coverage,0.9,1.0,30,0.02,0.0
+first30,E5_continuous20,all,956,149,23,15.585774058577408,121,22,147,121,10,E5_continuous20,0.8,3.0,20,0.05,20.0
